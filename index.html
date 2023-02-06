@@ -5,33 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
+    <script defer src="./assets/js/sandbox.js"></script>
+    <script defer src="./assets/js/Slider.js"></script>
     <script defer src="./index.js"></script>
+    <style>
+      .slider-container {
+        display: flex;
+        justify-content: center;
+        max-height: 80vmin;
+      }
+      .slider-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
-    <div id="test">test</div>
-    <h1>Title h1</h1>
-    <h1>Title h2</h1>
-    <h1>Title h3</h1>
-    <button>click me</button>
-    <input type="text" name="input" />
-    <ul>
-      <li class="item"><a href="">link</a></li>
-      <li class="item">qw</li>
-      <li class="item">qew</li>
-    </ul>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis amet libero
-      excepturi aliquid facere sint ullam nam provident, sunt exercitationem eum
-      consectetur accusamus. Officiis, illum. Provident minima aut magni cumque
-      nostrum ad, aperiam optio totam ea illo consectetur neque odit, minus
-      placeat dignissimos voluptate ipsum id nam quasi reprehenderit! Sequi.
-    </p>
-    <p>
-      Laborum quas ex reprehenderit illo iste! Dolorum est enim quas, asperiores
-      placeat ipsum sunt rem modi consectetur nam. Unde minus velit maiores
-      pariatur incidunt ad? Consequatur doloribus, fugiat commodi itaque
-      praesentium obcaecati animi nisi, dolorum suscipit cum id saepe. Non
-      possimus corrupti error vel, dolores odio natus sit molestias dolore?
-    </p>
+    <section class="slider-container">
+        <button>prev</button>
+        <div class="slide"><img src="" alt=""  /></div>
+        <button>next</button>
+    </section>
   </body>
 </html>

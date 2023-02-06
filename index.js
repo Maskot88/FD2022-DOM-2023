@@ -1,28 +1,29 @@
 "use strict";
 
-function logMessage() {
-  console.log("messege: click");
+const db = [
+  "https://media.bom.gov.au/social/upload/images/iStock-blue-sea-resize.jpg",
+  "https://as1.ftcdn.net/v2/jpg/01/21/06/48/1000_F_121064813_5CONOqmYSLyCLJlkRn3FsUl8733cg2qc.jpg",
+  "https://image.ceneostatic.pl/data/products/73512074/25742bb1-44fb-4aa5-ac1c-1e78bc08595e_i-sea-of-thieves-digital.jpg",
+];
+
+const slider = new Slider(db);
+
+const image = document.querySelector(".slide>img");
+function updateView() {
+  // image.src = db[slider.currentIndex];
+  image.src = slider.currentSlide;
 }
-// const button = document.getElementsByTagName("button")[0];
-const [button] = document.getElementsByTagName("button");
-button.addEventListener("click", logMessage);
-//По id считаеться самым быстрым
-const test = document.getElementById("test");
-// const test = document.querySelector('#test')
-console.log(test);
-//По name
-// const input = document.getElementsByName("input");
-const [input] = document.getElementsByName("input");
-console.log(input);
-//По class
-const lis = document.getElementsByClassName("item");
-console.log(lis);
-//По селектору
-const h1 = document.querySelector("h1");
-// const h1 = document.querySelectorAll('h1') //возвращ набор
-console.log(h1);
-//
-const ps = document.querySelector("p");
-// const ps = document.querySelectorAll("p");
-// const ps = document.querySelector("p+p");
-console.log(ps)
+updateView();
+
+const [prevBtn, nextBtn] = document.querySelectorAll(
+  ".slider-container button"
+);
+
+prevBtn.addEventListener("click",()=>{
+  slider.currentIndex = slider.prev();
+  updateView();
+});
+nextBtn.addEventListener("click",()=>{
+  slider.currentIndex = slider.next();
+  updateView();
+});

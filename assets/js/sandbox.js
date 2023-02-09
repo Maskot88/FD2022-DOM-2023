@@ -43,7 +43,7 @@
 //   }
 // }
 //2 Вариант
-const createAdder = (initial)=> (value)=> initial += value;
+// const createAdder = (initial)=> (value)=> initial += value;
 
-const adder = createAdder(100);
-adder(15);
+// const adder = createAdder(100);
+// adder(15);
